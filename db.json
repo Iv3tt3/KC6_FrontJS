@@ -1,1 +1,1 @@
-{"users":[],"ads":[{"name":"ad1"}, {"name":"ad2"}]}
+{"users":[],"ads":[{"name":"ad1", "description": "ad1Description", "price":"ad1price", "type": "ad1type", "img": "ad1img"}, {"name":"ad2", "description": "ad2Description", "price":"ad2price", "type": "ad2type", "img": "ad2img"}]}

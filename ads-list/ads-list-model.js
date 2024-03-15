@@ -1,6 +1,11 @@
 function parseAds(data){
   return data.map(data => ({
-    name: data.name
+    id: data.id,
+    name: data.name,
+    description: data.description, 
+    price: data.price,
+    type: data.type,
+    img: data.img
   }))
 }
 

@@ -1,3 +1,11 @@
 export function buildAd (ad) {
-    return `<p>${ad.name}</p>`
+    return `
+    <div>
+    <img src="${ad.img}" />
+    <p>${ad.name}</p>
+    <p>${ad.description}</p>
+    <p>${ad.price}</p>
+    <p>${ad.type}</p>
+    </div>
+    `
 }
