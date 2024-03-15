@@ -1,5 +1,5 @@
 import { getAds } from "./ads-list-model.js"
-import { buildAd } from "./ads-list-view.js"
+import { buildAd, noAdsMsg } from "./ads-list-view.js"
 
 export async function adsListController(adsList){
    
@@ -7,17 +7,25 @@ export async function adsListController(adsList){
         let ads = await getAds()
         ads = []
         if (ads.length > 0){
-            ads.forEach (ad => {
-                const AdContainer = document.createElement('div')
-                AdContainer.innerHTML = buildAd(ad)
-                adsList.appendChild(AdContainer)
-            })
+            displayAds(ads)
         } else {
-            adsList.innerHTML = "No ads yet"
+            displayNoAdsMsg ()
         }
         
     } catch (error) {
         alert(error) // Change when notification part is implemented
     }
     
+    function displayAds (ads) {
+        ads.forEach (ad => {
+            const AdContainer = document.createElement('div')
+            AdContainer.innerHTML = buildAd(ad)
+            adsList.appendChild(AdContainer)
+        })
+    }
+
+    function displayNoAdsMsg() {
+        adsList.innerHTML = noAdsMsg(adsList)
+    }
+
 }

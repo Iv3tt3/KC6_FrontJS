@@ -9,3 +9,7 @@ export function buildAd (ad) {
     </div>
     `
 }
+
+export function noAdsMsg(adList) {
+    return `No ads yet`
+}
