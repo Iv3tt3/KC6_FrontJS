@@ -5,7 +5,6 @@ export async function adsListController(adsList){
    
     try {
         let ads = await getAds()
-        ads = []
         if (ads.length > 0){
             displayAds(ads)
         } else {
@@ -13,7 +12,13 @@ export async function adsListController(adsList){
         }
         
     } catch (error) {
-        alert(error) // Change when notification part is implemented
+        const event = new CustomEvent('notification-event', {
+            detail: {
+                msg: error,
+                type: 'error'
+              }
+          });
+        adsList.dispatchEvent(event)
     }
     
     function displayAds (ads) {

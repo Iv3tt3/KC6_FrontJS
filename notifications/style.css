@@ -1,0 +1,17 @@
+.notifications div {
+    padding: 10pt 20pt;
+    color: darkgreen;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 14pt;
+    border-radius: 10pt;
+    border: 1pt solid lightgrey;
+    background-color: rgb(236, 235, 235);
+}
+
+.notifications div.error{
+    background-color: lightcoral;
+    color: initial;
+    font-weight: initial;
+}
+
