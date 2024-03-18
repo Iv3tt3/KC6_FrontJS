@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="notifications/styles.css" />
+    <link rel="stylesheet" href="signup/styles.css" />
+</head>
+<body>
+    <section class="notifications"></section>
+
+    <form id="signup-form">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" required/>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" required minlength="6"/>
+        </div>
+        <div>
+            <label for="password-confirmation">Confirm password</label>
+            <input type="password" id="password-confirmation" required minlength="6"/>
+        </div>
+        <div> 
+            <input class="btn" type="submit" value="Submit">
+        </div>
+      </form>
+  
+      <script type="module" src="signup.js"></script>
+</body>
+</html>
