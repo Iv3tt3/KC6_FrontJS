@@ -12,13 +12,7 @@ export async function adsListController(adsList){
         }
         
     } catch (error) {
-        const event = new CustomEvent('notification-event', {
-            detail: {
-                msg: error,
-                type: 'error'
-              }
-          });
-        adsList.dispatchEvent(event)
+        dispatchError(error)
     }
     
     function displayAds (ads) {
@@ -33,4 +27,13 @@ export async function adsListController(adsList){
         adsList.innerHTML = noAdsMsg(adsList)
     }
 
+    function dispatchError(error) {
+        const event = new CustomEvent('notification-event', {
+            detail: {
+                msg: error,
+                type: 'error'
+              }
+          });
+        adsList.dispatchEvent(event)
+    }
 }
