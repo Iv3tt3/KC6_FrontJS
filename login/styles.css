@@ -1,14 +1,14 @@
-#signup-form{
+#login-form{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
-#signup-form div{
+#login-form div{
     display: grid;
     gap: 10pt;
     margin: 20pt
 }
 
-#signup-form input{
+#login-form input{
     border-radius: 10px;
     border: 1pt solid lightblue;
     padding: 5pt;
