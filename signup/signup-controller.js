@@ -1,3 +1,4 @@
+import { createUser } from "./signup-models.js";
 
 export function signupController(signupForm) {
 
@@ -21,7 +22,7 @@ export function signupController(signupForm) {
         showErrors(errors);
 
         if (errors.length === 0) {
-            // Create user in API --> singup-models.js
+            sendDataToModel()
         }
 
     }
@@ -40,13 +41,34 @@ export function signupController(signupForm) {
 
     function showErrors(errors) {
         for (const error of errors) {
-            const event = new CustomEvent('notification-event', {
-                detail: {
-                    msg: error,
-                    type: 'error'
-                }
-            });
-            signupForm.dispatchEvent(event)
+            dispatchNotification('error', error)
         }
     }
+
+    function dispatchNotification(type, msg) {
+        const event = new CustomEvent('notification-event', {
+            detail: {
+                msg:  msg,
+                type: type
+            }
+        });
+        signupForm.dispatchEvent(event)
+    }
+
+    async function sendDataToModel() {
+        const email = signupForm.querySelector('#email');
+        const password = signupForm.querySelector('#password');
+
+        try {
+            await createUser(email.value, password.value)
+            dispatchNotification('success', 'Welcome on board! You have just sign up')
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+              }, 2000);
+        }
+        catch (error) {
+            dispatchNotification('error', error)
+        }
+    } 
 }
