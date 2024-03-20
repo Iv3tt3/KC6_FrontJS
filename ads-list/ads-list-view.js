@@ -1,11 +1,11 @@
 export function buildAd (ad) {
     return `
-    <div>
+    <div class='adblock'>
+    <p class='price'>${ad.price} EUR</p>
     <img src="${ad.img}" />
-    <p>${ad.name}</p>
-    <p>${ad.description}</p>
-    <p>${ad.price}</p>
-    <p>${ad.type}</p>
+    <p class='name'>${ad.name}</p>
+    <p class='description'>${ad.description}</p>
+    <p class='type'>${ad.type}</p>
     </div>
     `
 }
