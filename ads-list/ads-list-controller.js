@@ -4,6 +4,7 @@ import { buildAd, noAdsMsg } from "./ads-list-view.js"
 export async function adsListController(adsList){
    
     try {
+        spinner('active')
         let ads = await getAds()
         if (ads.length > 0){
             displayAds(ads)
@@ -13,6 +14,9 @@ export async function adsListController(adsList){
         
     } catch (error) {
         dispatchError(error)
+        
+    } finally{
+        spinner('inactive')
     }
     
     function displayAds (ads) {
@@ -36,4 +40,14 @@ export async function adsListController(adsList){
           });
         adsList.dispatchEvent(event)
     }
+
+    function spinner(action) {
+        const event = new CustomEvent('spinner-event', {
+            detail: {
+                action
+            }
+        })
+        adsList.dispatchEvent(event)
+    }
+
 }
