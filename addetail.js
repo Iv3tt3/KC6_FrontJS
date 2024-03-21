@@ -16,6 +16,4 @@ adDetail.addEventListener('spinner-event', (event) => {
   event.stopPropagation();
 })
 
-spinnerController(spinnerContainer)
-
 adDetailController(adDetail);

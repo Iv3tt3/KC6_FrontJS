@@ -35,6 +35,6 @@ export async function adDetailController(adDetailContainer) {
                 action
             }
         })
-        adsList.dispatchEvent(event)
+        adDetailContainer.dispatchEvent(event)
     }
 }

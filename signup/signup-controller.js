@@ -60,6 +60,7 @@ export function signupController(signupForm) {
         const password = signupForm.querySelector('#password');
 
         try {
+            spinner('active')
             await createUser(email.value, password.value)
             dispatchNotification('success', 'Welcome on board! You have just sign up')
             
@@ -69,6 +70,18 @@ export function signupController(signupForm) {
         }
         catch (error) {
             dispatchNotification('error', error)
+        } finally{
+            spinner('inactive')
         }
+        
     } 
+
+    function spinner(action) {
+        const event = new CustomEvent('spinner-event', {
+            detail: {
+                action
+            }
+        })
+        signupForm.dispatchEvent(event)
+    }
 }

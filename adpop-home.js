@@ -16,6 +16,4 @@ adsList.addEventListener('spinner-event', (event) => {
   event.stopPropagation();
 })
 
-spinnerController(spinnerContainer)
-
 adsListController(adsList);

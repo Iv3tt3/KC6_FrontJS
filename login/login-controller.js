@@ -11,6 +11,7 @@ export function loginController (loginForm) {
     
     async function submitLogin() {
         try{
+            spinner('active')
             const email = loginForm.querySelector('#email');
             const password = loginForm.querySelector('#password');
             const jwt = await loginUser(email.value, password.value)
@@ -20,6 +21,8 @@ export function loginController (loginForm) {
     
         } catch (error) {
             dispatchNotification('error', error)
+        } finally{
+            spinner('inactive')
         }
     }
     
@@ -30,6 +33,15 @@ export function loginController (loginForm) {
                 type: type
             }
         });
+        loginForm.dispatchEvent(event)
+    }
+
+    function spinner(action) {
+        const event = new CustomEvent('spinner-event', {
+            detail: {
+                action
+            }
+        })
         loginForm.dispatchEvent(event)
     }
 }
