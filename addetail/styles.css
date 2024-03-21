@@ -1,13 +1,8 @@
-a {
-    text-decoration: none;
-    color: initial;
-}
-
-.adblock {
+.addetail {
+    display: flex;
+    gap: 10pt;
+    flex-direction: column;
     margin: 10pt;
-    border: 1pt solid lightgray;
-    padding: 20pt;
-    border-radius: 10pt;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,33 +12,37 @@ img {
 }
 
 p.price {
-    background-color: lightblue;
     font-size: 16pt;
-    padding: 5pt;
     border-radius: 10pt 0;
     margin: 0pt;
-    text-align: right;
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p.name {
-    font-size: 20pt;
+    font-size: 25pt;
     font-weight: bold;
-    border-bottom: 1pt solid;
-    margin-bottom: 5pt;
+    margin-bottom: 15pt;
     margin-top: 3pt;
 
 }
 
 p.type {
-    font-size: 12pt;
+    font-size: 13pt;
     color: grey;
-    text-align: right;
     margin-bottom: 0;
 }
 
+p.description {
+    font-size: 14pt;
+}
 
+
+@media (min-width:750px) {
+    .addetail {
+        flex-direction: row;
+    }
+}
 
 @media (min-width:400px) {
     img{
