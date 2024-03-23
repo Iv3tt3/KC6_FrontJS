@@ -6,7 +6,7 @@ export function signupController(signupForm) {
         event.preventDefault();
         
         handleSubmit();
-      })
+    })
 
     function handleSubmit() {
         let errors = [];
