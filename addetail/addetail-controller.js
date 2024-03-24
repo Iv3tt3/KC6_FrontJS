@@ -20,8 +20,11 @@ export async function adDetailController(adDetailContainer, token) {
         spinner('inactive')
     }
 
-    function adRemoveButton(ad) {
-        const isAvailable = ad.userId === ad.userId //checkUser(ad)
+    async function adRemoveButton(ad) {
+        const userData = await checkUser(ad)
+        console.log(ad.userId)
+        console.log(userData.id)
+        const isAvailable = ad.userId === userData.id
         ? '' 
         : 'disabled';
         const AdContainer = document.createElement('div');
@@ -32,11 +35,14 @@ export async function adDetailController(adDetailContainer, token) {
         removeButton.addEventListener('click', () => { removeAd(ad.id, token)})
     }
 
-    async function checkUser(ad) {
-        try {userData = await getUserData(token)
+    async function checkUser() {
+        try {
+            const userData = await getUserData(token)
+            return userData
         } catch (error) {
             dispatchError(error)
         }
+
     }
 
     async function removeAd(adId, token) {

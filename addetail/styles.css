@@ -47,6 +47,15 @@ p.description {
         height: 150%;
         font-size: 16px;
 }
+#removeButton:hover {
+    cursor: pointer;
+}
+
+#removeButton:disabled {
+    background-color: lightgray;
+    cursor: default;
+}
+
 
 @media (min-width:750px) {
     .addetail {
