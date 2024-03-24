@@ -13,5 +13,11 @@ export function buildAdDetail(ad) {
         </div>
     </div>
     `
-  }
+}
   
+export function buildButton(isAviable) {
+    return `
+    <button ${isAviable} id="removeButton">Delete ad</button>
+    `
+
+}

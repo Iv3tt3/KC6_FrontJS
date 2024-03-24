@@ -16,4 +16,5 @@ adDetail.addEventListener('spinner-event', (event) => {
   event.stopPropagation();
 })
 
-adDetailController(adDetail);
+const token = localStorage.getItem('token');
+adDetailController(adDetail, token);
