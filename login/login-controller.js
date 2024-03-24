@@ -17,7 +17,9 @@ export function loginController (loginForm) {
             const jwt = await loginUser(email.value, password.value)
             dispatchNotification('sucess', "Welcome! You are logged in")
             localStorage.setItem('token', jwt);
-            window.location = './index.html';
+            setTimeout(() => {
+                window.location.href = 'index.html';
+              }, 2000);
     
         } catch (error) {
             dispatchNotification('error', error)
