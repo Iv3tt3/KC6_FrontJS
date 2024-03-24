@@ -27,7 +27,7 @@ export function newAdController (newAdForm) {
         }
 
         if (!imgValid(adData.img)) {
-            errors.push('Image not valid')
+            errors.push('Image not valid. Allowd jpg/jpeg/png and this pattern: ./image/<name>.(jpg|jpeg|png) Example: ./images/bike.jpeg')
         }
 
         showErrors(errors);
