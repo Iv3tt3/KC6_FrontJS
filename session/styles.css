@@ -1,0 +1,14 @@
+#session {
+    margin: 20pt;
+}
+
+.nav {
+    border-radius: 10pt;
+    padding: 10pt;
+    border: 1pt solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-color: rgb(143, 205, 225);
+    height: 150%;
+    font-size: 16px;
+}

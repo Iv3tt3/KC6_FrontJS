@@ -21,7 +21,10 @@ export async function getAdData(adId) {
   
     try {
       const response = await fetch(url);
-      const data = await response.json();
+      if (!response.ok) {
+        const data = await response.json()
+        throw new Error(data.message);
+      }
       const ad = parseAd(data);
       return ad;
     } catch (error) {

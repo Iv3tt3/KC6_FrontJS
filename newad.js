@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
   
     if (!token) {
-      window.location.href = 'index.html'
+        alert('You are not log in. Please log in first')
+      window.location.href = 'login.html'
     }
     
     const notificationContainer = document.querySelector('.notifications');
