@@ -61,7 +61,10 @@ export function newAdController (newAdForm) {
     }
 
     function priceValid(price) {
-        return new RegExp(/^[1-9]\d{0,2}(?:[.,]\d{3})*(?:,\d[1-9])?$/).test(price)
+        if (price <= 0){
+            return false
+        }
+        return new RegExp(/^(\d{1}\.)?(\d+\.?)+(,\d{2})?$/).test(price)
     }
 
     function imgValid(img) {

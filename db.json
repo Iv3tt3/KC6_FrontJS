@@ -1,1 +1,96 @@
-{"users":[{"username":"test@gmail.com","password":"$2b$10$t7SHEC.BFAR/MA0IVctmkOcFLkpHdXH3ALbTwT5Op9mTsTBP7DG.i","id":1}],"ads":[{"name":"ad1","description":"ad1Description","price":"ad1price","type":"ad1type","img":"./images/noimg.png"},{"name":"ad2","description":"ad2Description","price":"ad2price","type":"ad2type","img":"./images/noimg.png"}]}
+{
+    "users": [
+      {
+        "username": "user1@gmail.com",
+        "password": "$2b$10$8FMK4961pQp1brBoRAm6sejYzyD8qTUHYvw/0uVjQj6Oo6h2D8Bdu",
+        "id": 1
+      },
+      {
+        "username": "test@gmail.com",
+        "password": "$2b$10$qMxLKeRPanl0PigrDeq1zey2iEzH5.ZY0XewMLgtBNZ6cxXX5jEsO",
+        "id": 2
+      },
+      {
+        "username": "user2@gmail.com",
+        "password": "$2b$10$8hP/MlEwI58soT79ARNd8uV/kbKhNGyijHvhhaj1sj6sGQefNDKca",
+        "id": 3
+      },
+      {
+        "username": "user3@gmail.com",
+        "password": "$2b$10$8hP/MlEwI58soT79ARNd8uV/kbKhNGyijHvhhaj1sj6sGQefNDKca",
+        "id": 4
+      }
+    ],
+    "ads": [
+      {
+        "name": "Bike",
+        "price": "125",
+        "img": "./images/bike.jpeg",
+        "type": "To sell",
+        "description": "This is a bike description",
+        "userId": 1,
+        "updatedAt": "2024-03-23T23:58:40.767Z",
+        "id": 1
+      },
+      {
+        "name": "Macbook",
+        "price": "900",
+        "img": "./images/macbook.png",
+        "type": "To sell",
+        "description": "This is a Macbook description ad",
+        "userId": 3,
+        "updatedAt": "2024-03-24T17:53:05.410Z",
+        "id": 2
+      },
+      {
+        "name": "Car",
+        "price": "8000",
+        "img": "./images/noimg.png",
+        "type": "To buy",
+        "description": "Searching for a car",
+        "userId": 4,
+        "updatedAt": "2024-03-24T18:07:18.048Z",
+        "id": 3
+      },
+      {
+        "name": "Phone",
+        "price": "100",
+        "img": "./images/phone.jpeg",
+        "type": "To sell",
+        "description": "Selling this phone",
+        "userId": 1,
+        "updatedAt": "2024-03-24T18:19:00.312Z",
+        "id": 4
+      },
+      {
+        "name": "Laptop",
+        "price": "500",
+        "img": "./images/noimg.png",
+        "type": "To buy",
+        "description": "Looking for a laptop",
+        "userId": 2,
+        "updatedAt": "2024-03-24T18:21:37.200Z",
+        "id": 5
+      },
+      {
+        "name": "Sofa",
+        "price": "200",
+        "img": "./images/sofa.png",
+        "type": "To sell",
+        "description": "This is a sofa",
+        "userId": 2,
+        "updatedAt": "2024-03-24T18:22:19.849Z",
+        "id": 6
+      },
+      {
+        "name": "Sweater",
+        "price": "10",
+        "img": "./images/sweater.jpeg",
+        "type": "To sell",
+        "description": "This is a sweater",
+        "userId": 4,
+        "updatedAt": "2024-03-24T18:23:49.832Z",
+        "id": 7
+      }
+    ]
+  }
