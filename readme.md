@@ -37,14 +37,21 @@ By default, the server will run on port 8000, and you can access it at http://12
 
 - Start the server again
 
+___Users available to use for test:___
+
+- user1@gmail.com // Password: 123456
+- test@gmail.com // Password: 123456
+- user2@gmail.com // Password: 123456
+- user3@gmail.com // Password: 123456
+
 ## 2- Install Project
 
 - Clone the repository
 - Launch the application using Visual Studio Code's Live Server extension or similar.
 
 # Endpoints
-- /index.html: Display ad list
-- /addetail.html?adId=<id>: Display ad details and a button to delete ad (if logged in and if they belong to the current user)
-- /newad.html: Allow create a new ad. Only accessible if user is logged in.
-- /signup.html: To sign up new users.
-- /login.html: To login users.
+- ```/index.html```: Display ad list
+- ```/addetail.html?adId=<id>```: Display ad details and a button to delete ad (if logged in and if they belong to the current user)
+- ```/newad.html```: Allow create a new ad. Only accessible if user is logged in.
+- ```/signup.html```: To sign up new users.
+- ```/login.html```: To login users.
