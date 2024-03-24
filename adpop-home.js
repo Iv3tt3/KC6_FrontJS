@@ -1,4 +1,4 @@
-import { adsListController } from "./ads-list/ads-list-controller.js"
+import { adsListController } from "./list/list-controller.js"
 import { notificationController } from "./notifications/notification-controller.js";
 import { sessionController } from "./session/session-controller.js";
 import { spinnerController } from "./spinner/spinner-controller.js";

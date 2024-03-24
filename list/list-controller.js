@@ -1,5 +1,5 @@
-import { getAds } from "./ads-list-model.js"
-import { buildAd, noAdsMsg } from "./ads-list-view.js"
+import { getAds } from "./list-model.js"
+import { buildAd, noAdsMsg } from "./list-view.js"
 
 export async function adsListController(adsList){
    
